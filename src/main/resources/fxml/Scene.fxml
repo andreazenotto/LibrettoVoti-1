@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -23,7 +24,10 @@
    <center>
       <VBox BorderPane.alignment="CENTER">
          <children>
-            <TextArea fx:id="txtVoti" />
+            <TextArea fx:id="txtVoti" editable="false">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin></TextArea>
             <GridPane>
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="143.0" />
@@ -35,17 +39,35 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Nome corso" />
-                  <Label text="Punteggio" GridPane.rowIndex="1" />
-                  <TextField fx:id="txtNome" GridPane.columnIndex="1" />
-                  <ComboBox fx:id="cmbPunti" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" onAction="#handleNuovoVoto" text="Aggiungi" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Nome corso">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin></Label>
+                  <Label text="Punteggio" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin></Label>
+                  <TextField fx:id="txtNome" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin></TextField>
+                  <ComboBox fx:id="cmbPunti" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin></ComboBox>
+                  <Button mnemonicParsing="false" onAction="#handleNuovoVoto" text="Aggiungi" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin></Button>
                </children>
             </GridPane>
          </children>
       </VBox>
    </center>
    <bottom>
-      <Label fx:id="txtStatus" alignment="TOP_LEFT" textAlignment="CENTER" textFill="RED" BorderPane.alignment="CENTER" />
+      <Label fx:id="txtStatus" alignment="TOP_LEFT" textAlignment="CENTER" textFill="RED" BorderPane.alignment="CENTER_LEFT">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin></Label>
    </bottom>
 </BorderPane>
